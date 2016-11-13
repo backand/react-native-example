@@ -11,8 +11,8 @@ backand-react-native-example
 ```bash
     $ npm install
 ```  
-- Set up your emulator:→→
-ios: https://facebook.github.io/react-native/docs/getting-started.html#xcode (install xcode)
+- Set up your emulator:  
+ios: https://facebook.github.io/react-native/docs/getting-started.html#xcode (install xcode)  
 android: https://facebook.github.io/react-native/docs/getting-started.html#4-set-up-your-android-virtual-device (install Android Studio and run avd)
 - Run the app:
 ```bash
