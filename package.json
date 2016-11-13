@@ -1,0 +1,42 @@
+{
+  "name": "react_native_example",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "android:start": "react-native run-android",
+    "android:log": "react-native log-android",
+    "android:avds": "emulator -list-avds",
+    "android:avd": "emulator -avd",
+    "ios:start": "react-native run-ios",
+    "ios:log": "react-native log-ios"
+  },
+  "dependencies": {
+    "axios": "^0.15.2",
+    "immutable": "*",
+    "qs": "^6.3.0",
+    "react": "15.3.2",
+    "react-native": "^0.37.0",
+    "react-native-animatable": "*",
+    "react-native-vector-icons": "*",
+    "react-redux": "*",
+    "realm": "*",
+    "redux": "*",
+    "redux-thunk": "*",
+    "validator": "*"
+  },
+  "jest": {
+    "preset": "jest-react-native"
+  },
+  "devDependencies": {
+    "eslint": "*",
+    "eslint-plugin-react": "*",
+    "babel-jest": "16.0.0",
+    "babel-preset-react-native": "1.9.0",
+    "jest": "16.0.2",
+    "jest-react-native": "16.0.0",
+    "react-test-renderer": "15.3.2"
+  },
+  "author": "Ran Cohen <rannn505@outlook.com>"
+}
