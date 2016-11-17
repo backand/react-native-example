@@ -1,9 +1,10 @@
 import React, { PropTypes } from 'react'
 import { StyleSheet, View, Text, Image } from 'react-native'
 import { connect } from 'react-redux'
-import { anonymousRequest, tokenRequest } from './authActions'
+import { anonymousRequest, tokenRequest, logout } from './authActions'
 import BackandAnmsLogin from './AnonymousLogin'
 import BackandTknLogin from './TokenLogin'
+import LogoutBtn from './LogoutBtn'
 import { openModal } from './../Modal/modalActions'
 import LoadingHoc from './../loadingHoc'
 
@@ -14,7 +15,7 @@ class Login extends React.Component {
     }
   }
   render () {
-    const { props: { data, handleAnonymousRequest, handleTokenRequest } } = this
+    const { props: { data, handleAnonymousRequest, handleTokenRequest, handleLogout } } = this
 
     if(!data) {
       return (
@@ -37,9 +38,12 @@ class Login extends React.Component {
     }
     else {
       return (
-        <Text style={{textAlign: 'center', color: 'green', fontSize: 20, margin: 10}}>
-          {`Hey, ${data.get('details').get('name')}`}
-        </Text>
+        <View style={{flex: 2, flexDirection:'row', alignItems: 'center', justifyContent: 'space-around'}}>
+          <Text style={{textAlign: 'center', color: 'green', fontSize: 20}}>
+            {`Hey, ${data.get('details').get('name')}`}
+          </Text>
+          <LogoutBtn handlePress={handleLogout}/>
+        </View>
       )
     }
   }
@@ -80,6 +84,9 @@ const mapDispatchToProps = dispatch => {
     },
     handleTokenRequest: (creds) => {
       dispatch(tokenRequest(creds))
+    },
+    handleLogout: () => {
+      dispatch(logout())
     },
     onError: (text) => {
       dispatch(openModal(text))

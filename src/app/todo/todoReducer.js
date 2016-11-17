@@ -1,4 +1,4 @@
-import { ADD_TODO, TOGGLE_TODO, FETCH_TODOS_REQUEST, FETCH_TODOS_RESOLVE, FETCH_TODOS_REJECT } from './todoTypes';
+import { ADD_TODO, TOGGLE_TODO, FETCH_TODOS_REQUEST, FETCH_TODOS_RESOLVE, FETCH_TODOS_REJECT, TODOS_LOGOUT } from './todoTypes';
 import { Map } from 'immutable';
 
 export default (state = Map({}), action) => {
@@ -9,6 +9,8 @@ export default (state = Map({}), action) => {
       return state.merge({loading: false, data: action.payload.data, loaded: true});
     case FETCH_TODOS_REJECT:
       return state.merge({loading: false, error: action.payload.error, loaded: false});
+    case TODOS_LOGOUT:
+      return Map({});
     default:
       return state;
   }

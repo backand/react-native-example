@@ -9,6 +9,7 @@
     "android:log": "react-native log-android",
     "android:avds": "emulator -list-avds",
     "android:avd": "emulator -avd",
+    "android:build": "cd android && gradlew assembleRelease",
     "ios:start": "react-native run-ios",
     "ios:log": "react-native log-ios"
   },

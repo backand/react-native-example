@@ -7,15 +7,16 @@ const BASE_URL = `https://api.backand.com/1/objects/todos`
 export const fetchTodos = ({token, details: { userId }}) => {
   return dispatch => {
     let headers = token;
-    let params = `?filter=%5B%7B%20%20%20%20%22fieldName%22%3A%20%22user%22%2C%20%20%20%20%22operator%22%3A%20%22in%22%2C%20%20%20%20%22value%22%3A%20%22${userId}%22%20%20%7D%5D&exclude=metadata%26totalrows`
+    let filter = encodeURI(JSON.stringify([ {    "fieldName": "user",    "operator": "in",    "value": userId  }]));
+    let sort = encodeURI(JSON.stringify([ {    "fieldName": "creationDate",    "order": "desc"  }]));
     dispatch(request());
     axios({
-      url: `${BASE_URL}${userId ? params : ''}`,
+      url: `${BASE_URL}?pageSize=1000000&pageNumber=1&exclude=metadata&sort=${sort}${(userId != -1) ? '&filter='+filter : ''}`,
       method: 'GET',
       headers,
     })
       .then(response => {
-        // console.log(response.data);
+        // console.log(response.data.totalRows);
         dispatch(resolve(response.data.data));
       })
       .catch(error=> {

@@ -20,7 +20,7 @@ class TodoApp extends React.Component {
 
     if(user) {
       return (
-        <View style={{flex: 1}}>
+        <View style={{flex: 10}}>
           <AddTodo {...this.props}/>
           <TodoList {...this.props}/>
         </View>
@@ -28,8 +28,7 @@ class TodoApp extends React.Component {
     }
     else {
       return (
-        <View style={{height: 0, width: 0}}>
-        </View>
+        null
       )
     }
   }

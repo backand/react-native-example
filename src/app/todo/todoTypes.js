@@ -4,3 +4,4 @@ export const FETCH_TODOS_REJECT   = 'FETCH_TODOS_REJECT';
 
 export const ADD_TODO = 'ADD_TODO';
 export const TOGGLE_TODO = 'TOGGLE_TODO';
+export const TODOS_LOGOUT = 'TODOS_LOGOUT';

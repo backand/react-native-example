@@ -1,4 +1,4 @@
-import { AUTH_REQUEST, AUTH_RESOLVE, AUTH_REJECT } from './authTypes';
+import { AUTH_REQUEST, AUTH_RESOLVE, AUTH_REJECT, AUTH_LOGOUT } from './authTypes';
 import { Map } from 'immutable';
 
 export default (state = Map({}), action) => {
@@ -9,6 +9,8 @@ export default (state = Map({}), action) => {
       return state.merge({loading: false, data: action.payload.data, loaded: true});
     case AUTH_REJECT:
       return state.merge({loading: false, error: action.payload.error, loaded: false});
+    case AUTH_LOGOUT:
+      return Map({});
     default:
       return state;
   }

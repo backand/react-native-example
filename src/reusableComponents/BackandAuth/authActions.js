@@ -1,4 +1,4 @@
-import { AUTH_REQUEST, AUTH_RESOLVE, AUTH_REJECT } from './authTypes';
+import { AUTH_REQUEST, AUTH_RESOLVE, AUTH_REJECT, AUTH_LOGOUT } from './authTypes';
 import axios from 'axios'
 import qs from 'qs'
 
@@ -10,7 +10,8 @@ export const anonymousRequest = () => {
       },
       details: {
         username: 'anonymous',
-        name: 'anonymous user'
+        name: 'anonymous user',
+        userId: '-1'
       }
     }));
   }
@@ -73,5 +74,16 @@ const reject = (error) => {
     payload: {
       error
     }
+  }
+}
+
+export const logout = () => {
+  return dispatch => {
+    dispatch({
+      type: AUTH_LOGOUT,
+    });
+    dispatch({
+      type: 'TODOS_LOGOUT',
+    });
   }
 }
