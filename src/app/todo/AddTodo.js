@@ -11,7 +11,7 @@ const AddTodo = (props) => {
           	text: event.nativeEvent.text,
           	creationDate: (new Date()).toISOString(),
           	completionDate: null,
-          	user: props.user.get('details').get('userId')
+          	user: props.user.get('details').get('userId') != -1 ? props.user.get('details').get('userId') : null
           })
         }}
       />
