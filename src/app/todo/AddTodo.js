@@ -5,7 +5,7 @@ const AddTodo = (props) => {
   return (
     <View>
       <TextInput
-        placeholder='Add a new todo'
+        placeholder='Add a new todor'
         onSubmitEditing={(event) => {
           props.addTodo(props.user.toJS(), {
           	text: event.nativeEvent.text,
