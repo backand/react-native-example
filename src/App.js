@@ -21,8 +21,7 @@ const App = (props) => {
               <Image source={require('./../../static/img/Backand-logo.png')} />
             </View>
             <View style={styles.body}>
-              <Login />
-              <TodoApp />
+            
             </View>
           </View>
         </Provider>
