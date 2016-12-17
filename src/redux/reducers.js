@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
 // Import Reducers Here:
-import user from './../reusableComponents/BackandAuth/authReducer'
-import todos from './../app/todo/todoReducer'
-import modal from './../reusableComponents/Modal/modalReducer'
+import user from './../components/authentication/authReducer'
+import todos from './../components/todos/todosReducer'
+import modal from './../components/modal/modalReducer'
 
 const rootReducer = combineReducers({
   user,

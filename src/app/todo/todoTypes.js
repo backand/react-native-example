@@ -1,7 +1,0 @@
-export const FETCH_TODOS_REQUEST  = 'FETCH_TODOS_REQUEST';
-export const FETCH_TODOS_RESOLVE  = 'FETCH_TODOS_RESOLVE';
-export const FETCH_TODOS_REJECT   = 'FETCH_TODOS_REJECT';
-
-export const ADD_TODO = 'ADD_TODO';
-export const TOGGLE_TODO = 'TOGGLE_TODO';
-export const TODOS_LOGOUT = 'TODOS_LOGOUT';
