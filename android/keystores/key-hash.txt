@@ -1,0 +1,5 @@
+D:\Projects\Backand\React-Project\react_native_example\android\app>"c:\Program Files\Java\jdk1.8.0_91\bin\keytool" -exportcert -alias my-key-alias -keystore my-release-key.keystore | "C:\Program Files (x86)\GnuWin32\bin\openssl.exe" sha1 -binary | "C:\Program Files (x86)\GnuWin32\bin\openssl.exe" base64
+
+C:\Users\Ran\.android>"c:\Program Files\Java\jdk1.8.0_91\bin\keytool" -exportcert -alias androiddebugkey -keystore debug.keystore | "C:\Program Files (x86)\GnuWin32\bin\openssl.exe" sha1 -binary | "C:\Program Files (x86)\GnuWin32\bin\openssl.exe" base64
+Enter keystore password:  android
++qMP2vgsZy4dB+iGDxcXheWJt6k=
