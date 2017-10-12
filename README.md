@@ -24,16 +24,12 @@ Read more [react-native-cli](https://facebook.github.io/react-native/docs/gettin
  ```bash
  npm install
  ```
-
-3. Update Backand configurations in `app.js`
- ```javascript
- //backand credentials goes here.
- ```   
-4. Set up your emulator
+  
+3. Set up your emulator
 ios: https://facebook.github.io/react-native/docs/getting-started.html#xcode (install xcode)  
 android: https://facebook.github.io/react-native/docs/getting-started.html#4-set-up-your-android-virtual-device (install Android Studio and run avd)
 
-5. Launch app
+4. Launch app
  ```bash
  $ react-native run-ios
  $ react-native run-android 
