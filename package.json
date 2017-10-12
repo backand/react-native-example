@@ -20,7 +20,7 @@
     "react": "15.3.2",
     "react-native": "^0.37.0",
     "react-native-animatable": "*",
-    "react-native-vector-icons": "*",
+    "react-native-vector-icons": "^4.4.2",
     "react-redux": "*",
     "realm": "*",
     "redux": "*",
@@ -39,5 +39,8 @@
     "jest-react-native": "16.0.0",
     "react-test-renderer": "15.3.2"
   },
-  "author": "Ran Cohen <rannn505@outlook.com>"
+  "author": "Ran Cohen <rannn505@outlook.com>",
+  "repository": {
+    "url": "https://github.com/backand/react-native-example.git"
+  }
 }
